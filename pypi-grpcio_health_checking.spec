@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-grpcio_health_checking
-Version  : 1.55.0
-Release  : 43
-URL      : https://files.pythonhosted.org/packages/f4/5c/46f47929567816fb00fbc608037e477cb030a064a4899f54535ab93bb442/grpcio-health-checking-1.55.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/f4/5c/46f47929567816fb00fbc608037e477cb030a064a4899f54535ab93bb442/grpcio-health-checking-1.55.0.tar.gz
+Version  : 1.56.0
+Release  : 44
+URL      : https://files.pythonhosted.org/packages/ca/2f/84a9f89ee85905d66266ee70df5425036f9d228bdbf1181bbd933404361b/grpcio-health-checking-1.56.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ca/2f/84a9f89ee85905d66266ee70df5425036f9d228bdbf1181bbd933404361b/grpcio-health-checking-1.56.0.tar.gz
 Summary  : Standard Health Checking Service for gRPC
 Group    : Development/Tools
 License  : Apache-2.0
@@ -15,6 +15,8 @@ Requires: pypi-grpcio_health_checking-license = %{version}-%{release}
 Requires: pypi-grpcio_health_checking-python = %{version}-%{release}
 Requires: pypi-grpcio_health_checking-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(grpcio)
+BuildRequires : pypi(protobuf)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -54,10 +56,10 @@ python3 components for the pypi-grpcio_health_checking package.
 
 
 %prep
-%setup -q -n grpcio-health-checking-1.55.0
-cd %{_builddir}/grpcio-health-checking-1.55.0
+%setup -q -n grpcio-health-checking-1.56.0
+cd %{_builddir}/grpcio-health-checking-1.56.0
 pushd ..
-cp -a grpcio-health-checking-1.55.0 buildavx2
+cp -a grpcio-health-checking-1.56.0 buildavx2
 popd
 
 %build
@@ -65,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684865346
+export SOURCE_DATE_EPOCH=1687532372
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
