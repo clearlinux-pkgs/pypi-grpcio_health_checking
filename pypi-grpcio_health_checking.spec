@@ -7,7 +7,7 @@
 #
 Name     : pypi-grpcio_health_checking
 Version  : 1.60.0
-Release  : 52
+Release  : 53
 URL      : https://files.pythonhosted.org/packages/ac/24/d58e2855bedfe4150718e03babcadb68d3dd69803cfdb45d27195bafcd20/grpcio-health-checking-1.60.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ac/24/d58e2855bedfe4150718e03babcadb68d3dd69803cfdb45d27195bafcd20/grpcio-health-checking-1.60.0.tar.gz
 Summary  : Standard Health Checking Service for gRPC
