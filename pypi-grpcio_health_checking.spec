@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : pypi-grpcio_health_checking
-Version  : 1.62.2
-Release  : 57
-URL      : https://files.pythonhosted.org/packages/3f/f5/d995432a801779fb5ec806b610b3887ea8ca3b240d9d62537c52f94c7ec4/grpcio-health-checking-1.62.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/3f/f5/d995432a801779fb5ec806b610b3887ea8ca3b240d9d62537c52f94c7ec4/grpcio-health-checking-1.62.2.tar.gz
+Version  : 1.63.0
+Release  : 58
+URL      : https://files.pythonhosted.org/packages/d1/dc/36baa325f30c05ec576f968e99799e09141e0c7c46d1abc7e13dc6c3da71/grpcio_health_checking-1.63.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d1/dc/36baa325f30c05ec576f968e99799e09141e0c7c46d1abc7e13dc6c3da71/grpcio_health_checking-1.63.0.tar.gz
 Summary  : Standard Health Checking Service for gRPC
 Group    : Development/Tools
 License  : Apache-2.0
@@ -58,10 +58,10 @@ python3 components for the pypi-grpcio_health_checking package.
 
 
 %prep
-%setup -q -n grpcio-health-checking-1.62.2
-cd %{_builddir}/grpcio-health-checking-1.62.2
+%setup -q -n grpcio_health_checking-1.63.0
+cd %{_builddir}/grpcio_health_checking-1.63.0
 pushd ..
-cp -a grpcio-health-checking-1.62.2 buildavx2
+cp -a grpcio_health_checking-1.63.0 buildavx2
 popd
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713536712
+export SOURCE_DATE_EPOCH=1714498090
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -114,7 +114,7 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-grpcio_health_checking
-cp %{_builddir}/grpcio-health-checking-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-grpcio_health_checking/242ec6abfdd8c114f2e803b84934469c299348fc || :
+cp %{_builddir}/grpcio_health_checking-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-grpcio_health_checking/242ec6abfdd8c114f2e803b84934469c299348fc || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
