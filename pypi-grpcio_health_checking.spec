@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : pypi-grpcio_health_checking
-Version  : 1.63.0
-Release  : 58
-URL      : https://files.pythonhosted.org/packages/d1/dc/36baa325f30c05ec576f968e99799e09141e0c7c46d1abc7e13dc6c3da71/grpcio_health_checking-1.63.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d1/dc/36baa325f30c05ec576f968e99799e09141e0c7c46d1abc7e13dc6c3da71/grpcio_health_checking-1.63.0.tar.gz
+Version  : 1.64.0
+Release  : 59
+URL      : https://files.pythonhosted.org/packages/2e/50/fd45253e143e8a816b84e35a5838f1f6893bd5ec4b632eec628ed5d3ab00/grpcio_health_checking-1.64.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2e/50/fd45253e143e8a816b84e35a5838f1f6893bd5ec4b632eec628ed5d3ab00/grpcio_health_checking-1.64.0.tar.gz
 Summary  : Standard Health Checking Service for gRPC
 Group    : Development/Tools
 License  : Apache-2.0
@@ -58,10 +58,10 @@ python3 components for the pypi-grpcio_health_checking package.
 
 
 %prep
-%setup -q -n grpcio_health_checking-1.63.0
-cd %{_builddir}/grpcio_health_checking-1.63.0
+%setup -q -n grpcio_health_checking-1.64.0
+cd %{_builddir}/grpcio_health_checking-1.64.0
 pushd ..
-cp -a grpcio_health_checking-1.63.0 buildavx2
+cp -a grpcio_health_checking-1.64.0 buildavx2
 popd
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1714498090
+export SOURCE_DATE_EPOCH=1716262671
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
