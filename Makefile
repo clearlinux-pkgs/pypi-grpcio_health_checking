@@ -1,5 +1,5 @@
 PKG_NAME := pypi-grpcio_health_checking
-URL = https://files.pythonhosted.org/packages/47/09/4ed16aff6731b476207aeefb28dca818d8338a7738792a5aedfaded561e1/grpcio_health_checking-1.67.0.tar.gz
+URL = https://files.pythonhosted.org/packages/64/dd/e3b339fa44dc75b501a1a22cb88f1af5b1f8c964488f19c4de4cfbbf05ba/grpcio_health_checking-1.67.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
